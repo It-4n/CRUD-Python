@@ -43,7 +43,6 @@ def read(cursor):
         print()
         print(f"*Erro ao consultar dados: {err}*")
 
-
 # UPDATE
 def update(cursor, conexao):
     id = input("Informe o ID do funcionário cadastrado que deseja atualizar o nome: ")
@@ -107,7 +106,6 @@ def authenticate(cursor):
 # DEFAULT
 def default():
     print("Opção inválida. Por favor, escolha uma opção válida do menu.")
-
 
 # MAPEAMENTO DAS OPÇÕES PARA FUNÇÕES
 switch = {
