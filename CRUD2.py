@@ -33,15 +33,19 @@ def create(cursor, conexao):
 def read(cursor):
     comando_read = 'SELECT * FROM Funcionarios'
 
-    try:
-        cursor.execute(comando_read)
-        resultados = cursor.fetchall()
+    if cursor.rowcount > 0:
+        try:
+            cursor.execute(comando_read)
+            resultados = cursor.fetchall()
 
-        for row in resultados:
-            print(row)
-    except mysql.connector.Error as err:
+            for row in resultados:
+                print(row)
+        except mysql.connector.Error as err:
+            print()
+            print(f"*Erro ao consultar dados: {err}*")
+    else:
         print()
-        print(f"*Erro ao consultar dados: {err}*")
+        print("*Não existem funcionários cadastrados.*")
 
 # UPDATE
 def update(cursor, conexao):
