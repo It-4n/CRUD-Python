@@ -42,7 +42,6 @@ def read(cursor):
         print()
         print(f"*Erro ao consultar dados: {err}*")
 
-
 # UPDATE
 def update(cursor, conexao):
     id = input("Informe o ID do livro que deseja atualizar: ")
@@ -84,7 +83,6 @@ def delete(cursor, conexao):
 
 def default():
     print("Opção inválida. Por favor, escolha uma opção válida do menu.")
-
 
 # MAPEAMENTO DAS OPÇÕES PARA FUNÇÕES
 switch = {
